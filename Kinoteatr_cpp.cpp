@@ -1,14 +1,19 @@
 ﻿#include <iostream>
 #include <string>
 #include <fstream>
-#include "Film.h";
-#include "Function.h";
+#include "Film.h"
+#include "Function.h"
 using namespace std;
 bool work=true;
 
 int main(int argc, char* argv[])
 {
     setlocale(LC_CTYPE, "Russian");
+    if (argc != 2)
+    {
+        cout << "Неверное колличество параметров" << endl;
+        return 1;
+    }
     char choice;
     cout << "Добро пожаловать в кинотеатр!!!" << endl << "Выберите действие" << endl;
     while (work) {

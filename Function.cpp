@@ -129,6 +129,7 @@ void searchfilm_name(string filename) {
 
     } while (s < n - 4);
     file.close();
+    delete film;
 }
 
 void searchfilm_genre(string filename) {
@@ -163,6 +164,7 @@ void searchfilm_genre(string filename) {
 
     } while (s < n - 5);
     file.close();
+    delete film;
 }
 
 void listfilm(string filename) {
@@ -189,6 +191,7 @@ void listfilm(string filename) {
 
     } while (s < n - 5);
     file.close();
+    delete film;
 }
 
 void changefilm(string filename) {
@@ -272,6 +275,7 @@ void changefilm(string filename) {
     }
     file << archive;
     file.close();
+    delete film;
 }
 
 ostream& operator<<(ostream& os, const Film& film) {
