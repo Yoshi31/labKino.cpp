@@ -7,14 +7,14 @@ class Film
 private:
     string name;
     string genre;
-    float ratting;
+    double ratting;
     int price;
 public:
     Film();
-    void SetFilm(string name_value, string genre_value, float ratting_value, int price_value);
+    void SetFilm(string name_value, string genre_value, double ratting_value, int price_value);
     string GetName();
     string GetGenre();
-    float GetRatting();
+    double GetRatting();
     int GetPrice();
     void ScanFilm();
     void Print();
