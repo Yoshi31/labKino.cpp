@@ -33,27 +33,27 @@ int Film::GetPrice() {
 
 void Film:: ScanFilm() {
     setlocale(LC_CTYPE, "Russian");
-    cout << "ÍÎÂÛÉ ÔÈËÜÌ" << endl << "Ââåäèòå äàííûõ î ôèëüìå" << endl;
-    cout << "Íàçâàíèå:" << endl;
+    cout << "ÐÐžÐ’Ð«Ð™ Ð¤Ð˜Ð›Ð¬Ðœ" << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð¾ Ñ„Ð¸Ð»ÑŒÐ¼Ðµ" << endl;
+    cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ:" << endl;
     cin >> name;
-    cout << "Æàíð:" << endl;
+    cout << "Ð–Ð°Ð½Ñ€:" << endl;
     cin >> genre;
-    cout << "Ðýéòèíã:" << endl;
+    cout << "Ð ÑÐ¹Ñ‚Ð¸Ð½Ð³:" << endl;
     cin >> ratting;
-    cout << "Öåíó çà áèëåò:" << endl;
+    cout << "Ð¦ÐµÐ½Ñƒ Ð·Ð° Ð±Ð¸Ð»ÐµÑ‚:" << endl;
     cin >> price;
 };
 
 void Film::Print() {
     setlocale(LC_CTYPE, "Russian");
-    cout << "Íàçâàíèå: " << name << "\t Æàíð: " << genre << "\t Ðýéòèíã: " << ratting << "\t Öåíà: " << price << endl;
+    cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ: " << name << "\t Ð–Ð°Ð½Ñ€: " << genre << "\t Ð ÑÐ¹Ñ‚Ð¸Ð½Ð³: " << ratting << "\t Ð¦ÐµÐ½Ð°: " << price << endl;
 }
 
 void Film::Putinfile(string filename) {
     ofstream file;
     file.open(filename, ios_base::app);
     if (!file) {
-        cout << "Îøèáêà ðàáîòû ñ ôàéëîì" << endl;
+        cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ Ñ Ñ„Ð°Ð¹Ð»Ð¾Ð¼" << endl;
         return;
     }
     file << name << " ";
