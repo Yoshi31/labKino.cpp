@@ -9,7 +9,7 @@ Film::Film() {
     price = 0;
 }
 
-void Film::SetFilm(string name_value, string genre_value, float ratting_value, int price_value) {
+void Film::SetFilm(string name_value, string genre_value, double ratting_value, int price_value) {
     name = name_value;
     genre = genre_value;
     ratting = ratting_value;
@@ -23,7 +23,7 @@ string Film:: GetGenre() {
     return genre;
 }
 
-float Film::GetRatting() {
+double Film::GetRatting() {
     return ratting;
 }
 
@@ -33,27 +33,27 @@ int Film::GetPrice() {
 
 void Film:: ScanFilm() {
     setlocale(LC_CTYPE, "Russian");
-    cout << "ÐÐžÐ’Ð«Ð™ Ð¤Ð˜Ð›Ð¬Ðœ" << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð¾ Ñ„Ð¸Ð»ÑŒÐ¼Ðµ" << endl;
-    cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ:" << endl;
+    cout << "ÍÎÂÛÉ ÔÈËÜÌ" << endl << "Ââåäèòå äàííûõ î ôèëüìå" << endl;
+    cout << "Íàçâàíèå:" << endl;
     cin >> name;
-    cout << "Ð–Ð°Ð½Ñ€:" << endl;
+    cout << "Æàíð:" << endl;
     cin >> genre;
-    cout << "Ð ÑÐ¹Ñ‚Ð¸Ð½Ð³:" << endl;
+    cout << "Ðýéòèíã:" << endl;
     cin >> ratting;
-    cout << "Ð¦ÐµÐ½Ñƒ Ð·Ð° Ð±Ð¸Ð»ÐµÑ‚:" << endl;
+    cout << "Öåíó çà áèëåò:" << endl;
     cin >> price;
 };
 
 void Film::Print() {
     setlocale(LC_CTYPE, "Russian");
-    cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ: " << name << "\t Ð–Ð°Ð½Ñ€: " << genre << "\t Ð ÑÐ¹Ñ‚Ð¸Ð½Ð³: " << ratting << "\t Ð¦ÐµÐ½Ð°: " << price << endl;
+    cout << "Íàçâàíèå: " << name << "\t Æàíð: " << genre << "\t Ðýéòèíã: " << ratting << "\t Öåíà: " << price << endl;
 }
 
 void Film::Putinfile(string filename) {
     ofstream file;
     file.open(filename, ios_base::app);
     if (!file) {
-        cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ Ñ Ñ„Ð°Ð¹Ð»Ð¾Ð¼" << endl;
+        cout << "Îøèáêà ðàáîòû ñ ôàéëîì" << endl;
         return;
     }
     file << name << " ";

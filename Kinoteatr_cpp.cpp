@@ -4,10 +4,10 @@
 #include "Film.h"
 #include "Function.h"
 using namespace std;
-bool work=true;
 
 int main(int argc, char* argv[])
 {
+    bool work = true;
     setlocale(LC_CTYPE, "Russian");
     if (argc != 2)
     {
